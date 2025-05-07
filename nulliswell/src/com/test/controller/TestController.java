@@ -5,4 +5,6 @@ public class TestController {
 	private String name;
 	private int age;
 	private double height;
+	private double weight;
+	
 }
