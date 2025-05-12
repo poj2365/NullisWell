@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>그룹 채팅</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .chat-container {
+      width: 400px;
+      height: 600px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .chat-header {
+      padding: 15px;
+      background-color: #4A90E2;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .chat-messages {
+      flex: 1;
+      padding: 15px;
+      overflow-y: auto;
+      background-color: #fafafa;
+    }
+
+    .message {
+      margin-bottom: 10px;
+      max-width: 80%;
+      padding: 10px;
+      border-radius: 10px;
+      line-height: 1.4;
+      word-wrap: break-word;
+    }
+
+    .message.user {
+      background-color: #DCF8C6;
+      align-self: flex-end;
+    }
+
+    .message.other {
+      background-color: #eee;
+      align-self: flex-start;
+    }
+
+    .chat-input {
+      display: flex;
+      padding: 10px;
+      border-top: 1px solid #ccc;
+    }
+
+    .chat-input input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .chat-input button {
+      margin-left: 10px;
+      padding: 10px 15px;
+      background-color: #4A90E2;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .chat-input button:hover {
+      background-color: #357ABD;
+    }
+  </style>
+</head>
+<body>
+
+<div class="chat-container">
+  <div class="chat-header">스터디 그룹 채팅</div>
+  <div class="chat-messages" id="chatMessages">
+    <div class="message other">안녕하세요! 가입했습니다 😊</div>
+    <div class="message user">반가워요! 앞으로 잘 부탁드려요</div>
+  </div>
+  <div class="chat-input">
+    <input type="text" id="messageInput" placeholder="메시지를 입력하세요..." />
+    <button onclick="sendMessage()">전송</button>
+  </div>
+</div>
+
+<script>
+  function sendMessage() {
+    const input = document.getElementById("messageInput");
+    const chat = document.getElementById("chatMessages");
+
+    if (input.value.trim() !== "") {
+      const message = document.createElement("div");
+      message.className = "message user";
+      message.textContent = input.value;
+      chat.appendChild(message);
+      input.value = "";
+      chat.scrollTop = chat.scrollHeight;
+    }
+  }
+</script>
+
+</body>
+</html>

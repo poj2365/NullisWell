@@ -1,0 +1,267 @@
+  html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+  body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .container {
+    flex: 1;
+  }
+
+.nav-main {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.nav-sub {
+    font-size: 13px;
+    color: gray;
+}
+
+.menu-bar {
+    display: flex;
+    gap: 30px;
+    background-color: #f8f9fa;
+    padding-top: 10px;
+    padding-bottom: 5px;
+    margin: 0;
+}
+
+.board-menu a{
+    color: #333;
+    text-decoration: none;
+}
+.menu-group {
+    list-style: none;
+    position: relative;
+}
+
+.menu-group>a {
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.menu-group>a:hover {
+    color: #007bff;
+}
+
+.submenu {
+    display: none;
+    position: absolute;
+    top: 35px;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    list-style: none;
+    padding: 10px 0;
+    margin: 0;
+    min-width: 140px;
+    z-index: 1000;
+}
+
+.submenu li {
+    padding: 5px 15px;
+}
+
+.submenu li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.submenu li a:hover {
+    color: #007bff;
+}
+
+.menu-group:hover .submenu {
+    display: block;
+}
+
+/* 인기 검색어 hover dropdown */
+.dropdown-hover {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu-custom {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: auto;
+    right: 0;
+    /* 오른쪽 끝에 붙이기 */
+    min-width: 200px;
+    background-color: white;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 15px;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.dropdown-hover:hover .dropdown-menu-custom {
+    display: block;
+}
+
+.search-rank li {
+    list-style: none;
+    margin: 5px 0;
+}
+
+.search-rank li span {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.search-rank a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+.search-rank a:hover {
+    text-decoration: underline;
+}
+
+/* 로그인 메뉴 */
+.nav-small-menu {
+    display: flex;
+    gap: 15px;
+    font-size: 14px;
+}
+
+.nav-small-menu a {
+    text-decoration: none;
+    color: #555;
+}
+
+.nav-small-menu a:hover {
+    color: #007bff;
+}
+
+/* 반응형 검색창 */
+.search-input {
+    width: 100%;
+    max-width: 800px;
+}
+
+.search-box {
+    width: 100%;
+    max-width: 800px;
+}
+
+.search-box button {
+    height: 38px;
+}
+
+/* user-card */
+.user-card {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    font-family: sans-serif;
+}
+
+.nickname {
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.info {
+    margin: 5px;
+    padding-bottom: 10px;
+}
+
+.wrapper {
+    position: relative;
+    /* 기준점 */
+    display: inline-block;
+}
+
+.icon {
+    font-size: 30px;
+}
+
+.badge {
+    position: absolute;
+    top: -20%;
+    right: 50%;
+    background-color: #00c471;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 12px;
+    z-index: 10;
+    /* 위에 뜨도록 */
+}
+
+.user-menu {
+    text-align: center;
+    font-size: 13px;
+    color: #333;
+    margin-top: 5px;
+}
+
+.user-menu a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 4px;
+}
+
+/* user-card  end */
+/* footer */
+.site-footer {
+    background-color: #f5f5f5;
+    padding: 20px 0;
+    border-top: 1px solid #ddd;
+    font-size: 14px;
+    color: #555;
+    margin-top: 50px;
+    position : relative;
+    transform : translateY(50%);
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.footer-left p {
+    margin: 5px 0;
+}
+
+.footer-links a {
+    margin-left: 20px;
+    color: #555;
+    text-decoration: none;
+}
+
+.footer-links span{
+    margin-left: 20px;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+/* footer end */

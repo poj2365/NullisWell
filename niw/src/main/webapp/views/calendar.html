@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>공부 달력</title>
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+	rel="stylesheet">
+<link rel="stylesheet" href="./style.css">
+<link rel="stylesheet" href="./submenu.css">
+<style>
+
+h2 {
+	text-align: center;
+}
+
+.calendar-container {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+table.calendar {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.calendar th, .calendar td {
+	width: 14.28%;
+	height: 100px;
+	border: 1px solid #ddd;
+	vertical-align: top;
+	position: relative;
+	padding: 4px;
+	font-size: 14px;
+}
+
+.calendar th {
+	background: #f0f0f0;
+	font-weight: bold;
+	color: #333;
+	height: 40px;
+}
+
+.day-number {
+	font-weight: bold;
+	margin-bottom: 4px;
+}
+
+.study-time {
+	font-size: 13px;
+	margin-top: 4px;
+	display: block;
+	color: #333;
+}
+
+.day-box {
+	width: 100%;
+	height: 100%;
+	padding: 5px;
+	border-radius: 4px;
+}
+
+/* 색상 단계 */
+.level-0 {
+	background-color: #ffffff;
+}
+
+.level-1 {
+	background-color: #dcedc8;
+}
+
+.level-2 {
+	background-color: #aed581;
+}
+
+.level-3 {
+	background-color: #7cb342;
+	color: white;
+}
+
+.level-4 {
+	background-color: #558b2f;
+	color: white;
+}
+</style>
+</head>
+<body>
+	<!-- 최상단 로그인/회원가입 라인 -->
+	<div class="bg-light px-4 py-1 d-flex justify-content-end"
+		style="font-size: 13px;">
+		<div class="wrapper">
+			<span class="badge" style="top: 10%; right: 110%;">999+</span> <a
+				href="#" class="me-3 text-decoration-none text-secondary">알림</a>
+		</div>
+		<a href="#" class="me-3 text-decoration-none textP-secondary">로그인</a>
+		<a href="#" class="me-3 text-decoration-none text-secondary">회원가입</a>
+		<a href="#" class="me-3 text-decoration-none text-secondary">고객센터</a>
+	</div>
+	<!-- 상단 메뉴 바 -->
+	<nav class="navbar bg-light border-bottom px-4 py-2">
+		<div class="container-fluid d-flex align-items-center">
+			<a class="navbar-brand fw-bold me-3" href="./test.html">Null is
+				Well</a>
+
+			<!-- 검색창 + 인기 검색어 -->
+			<div class="d-flex align-items-center flex-grow-1">
+				<div class="d-flex align-items-center search-box me-5">
+					<input class="form-control search-input mh-50 me-3 flex-grow-1"
+						type="search" placeholder="관심있는 내용을 검색해보세요!" />
+					<button class="btn btn-outline-secondary ms-2" type="submit">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+							fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+								d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85zm-5.242 1.106a5.5 5.5 0 1 1 0-11 5.5 5.5 0 0 1 0 11z" />
+                        </svg>
+					</button>
+				</div>
+				<!-- 인기 검색어 dropdown -->
+				<div class="dropdown-hover">
+					<a class="nav-link dropdown-toggle me-5" href="#" id="boardMenu"
+						role="button"> 인기 검색어 </a>
+					<div class="dropdown-menu-custom">
+						<div class="fw-bold mb-2">실시간 검색어</div>
+						<ul class="search-rank p-0 m-0">
+							<li><span>1</span><a href="#">레오 14세</a></li>
+							<li><span>2</span><a href="#">교황</a></li>
+							<li><span>3</span><a href="#">김문수</a></li>
+							<li><span>4</span><a href="#">콘클라베</a></li>
+							<li><span>5</span><a href="#">추기경</a></li>
+							<li><span>6</span><a href="#">이재명</a></li>
+							<li><span>7</span><a href="#">오승환</a></li>
+							<li><span>8</span><a href="#">인도</a></li>
+							<li><span>9</span><a href="#">유흥식</a></li>
+							<li><span>10</span><a href="#">황동하</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 메뉴 탭 -->
+		<div>
+			<ul class="menu-bar">
+				<li class="menu-group"><a href="#">자유게시판</a></li>
+				<li class="menu-group"><a href="#">자료게시판</a></li>
+				<li class="menu-group"><a href="#">스터디게시판</a>
+					<ul class="submenu">
+						<li><a href="./study.html">모집글</a></li>
+						<li><a href="./mystudygroup.html">스터디그룹</a></li>
+						<li><a href="./timer.html">타이머</a></li>
+					</ul></li>
+			</ul>
+		</div>
+	</nav>
+	    <div class="page-wrapper">
+        <!-- 오른쪽 컬럼 -->
+        <div class="study-menu">
+            <ul>
+                <li><a href="./study.html"><strong>스터디</strong></a></li>
+                <li><a href="./study.html">모집글</a></li>
+                <li><a href="./mystudygroup.html">스터디그룹</a></li>
+            </ul>
+        </div>
+       <div class="container">
+	<h2>📅 2025년 5월 공부 달력</h2>
+	<div class="calendar-container">
+		<table class="calendar" id="calendar">
+			<thead>
+				<tr>
+					<th>일</th>
+					<th>월</th>
+					<th>화</th>
+					<th>수</th>
+					<th>목</th>
+					<th>금</th>
+					<th>토</th>
+				</tr>
+			</thead>
+			<tbody id="calendar-body"></tbody>
+		</table>
+	</div>
+	</div>
+	</div>
+	<footer class="site-footer">
+		<div class="footer-content">
+			<div class="footer-left">
+				<p>
+					<strong>© 2025 Blind Clone</strong>
+				</p>
+				<p>Contact: support@example.com</p>
+			</div>
+			<div class="footer-links">
+				<a href="#">이용약관</a> <span>|</span> <a href="#">개인정보처리방침</a> <span>|</span>
+				<a href="#">공지사항</a> <span>|</span> <a href="#">사이트정보</a> <span>|</span>
+				<a href="#">광고문의</a> <span>|</span> <a href="#">고객센터</a>
+			</div>
+		</div>
+	</footer>
+
+	<script>
+  const studyData = {
+    "2025-05-01": 0,
+    "2025-05-02": 30,
+    "2025-05-03": 90,
+    "2025-05-04": 60,
+    "2025-05-05": 120,
+    "2025-05-06": 0,
+    "2025-05-07": 180,
+    "2025-05-11": 45,
+    "2025-05-12": 0,
+    "2025-05-15": 150,
+    "2025-05-18": 0,
+    "2025-05-21": 60,
+    "2025-05-27": 30,
+    "2025-05-31": 200
+  };
+
+  function getColorLevel(minutes) {
+    if (minutes === 0) return "level-0";
+    if (minutes <= 30) return "level-1";
+    if (minutes <= 60) return "level-2";
+    if (minutes <= 120) return "level-3";
+    return "level-4";
+  }
+
+  const year = 2025;
+  const month = 4; // May (JS는 0부터 시작)
+  const firstDay = new Date(year, month, 1).getDay(); // 0 = Sunday
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+
+  const tbody = document.getElementById("calendar-body");
+  let date = 1;
+  for (let i = 0; i < 6; i++) { // 최대 6주
+    const row = document.createElement("tr");
+
+    for (let j = 0; j < 7; j++) {
+      const cell = document.createElement("td");
+
+      if (i === 0 && j < firstDay) {
+        cell.innerHTML = ""; // 비어있는 칸
+      } else if (date > daysInMonth) {
+        cell.innerHTML = ""; // 다음 달로 넘어감
+      } else {
+        const dateStr = `${year}-${String(month + 1).padStart(2, '0')}-${String(date).padStart(2, '0')}`;
+        const studyTime = studyData[dateStr] || 0;
+        const colorClass = getColorLevel(studyTime);
+
+        cell.innerHTML = `
+          <div class="day-box ${colorClass}">
+            <div class="day-number">${date}</div>
+            <span class="study-time">${studyTime}분</span>
+          </div>
+        `;
+        date++;
+      }
+      row.appendChild(cell);
+    }
+    tbody.appendChild(row);
+  }
+</script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
