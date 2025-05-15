@@ -22,6 +22,10 @@
     font-size: 13px;
     color: gray;
 }
+.nav-menu{
+	max-width : 1300px;
+	width:100%;
+}
 
 .menu-bar {
     display: flex;
@@ -30,6 +34,7 @@
     padding-top: 10px;
     padding-bottom: 5px;
     margin: 0;
+    justify-content: center;
 }
 
 .board-menu a{
