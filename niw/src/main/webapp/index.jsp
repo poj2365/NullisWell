@@ -1,79 +1,190 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@include file="/WEB-INF/views/common/header.jsp" %>
-<section>
-   <div class="container mt-4">
-        <div class="row">
 
-            <!-- 왼쪽 컬럼 -->
-            <div class="col-md-8 board-menu">
-                <h5 class="border-bottom pb-2 mb-3">베스트</h5>
-                <ul class="list-group mb-4">
-                    <li class="list-group-item">🏢 요즘 핫한 개발 언어 <span class="float-end text-muted">👍 60 💬 526</span>
-                    </li>
-                    <li class="list-group-item">😕 여드름 도대체 몇살까지 나나요? <span class="float-end text-muted">👍 0 💬
-                            17</span></li>
-                    <li class="list-group-item">📍 명수님이 좋아하는 맛집 추천 <span class="float-end text-muted">👍 0 💬 8</span>
-                    </li>
-                    <!-- 생략 가능 -->
-                </ul>
-
-                <h5 class="border-bottom pb-2 mb-3">뻘뻘팀</h5>
-                <ul class="list-group">
-                    <li class="list-group-item">⭐ 스타우브 베이비웍 <span class="float-end text-muted">77</span></li>
-                    <li class="list-group-item">🎄 조금 많이 이르지만 이거 사놓을까? 미니트리 <span class="float-end text-muted">81</span>
-                    </li>
-                </ul>
-
-                <h5 class="border-bottom pb-2 mt-3 mb-3">
-                    <a href="./study.html">스터디 게시판 </a>
-                </h5>
-                <ul class="list-group">
-                    <a href="./groupdetail.html">
-                    <li class="list-group-item"><span class="badge" style="top: 30%; right: 59%;">모집중</span> [Kotlin + Spring] 코프링 스터디원 모집 <span class="float-end text-muted">77</span></li></a>
-                    <a href="./groupdetail.html">
-                    <li class="list-group-item"><span class="badge" style="top: 30%; right: 41%;">모집중</span> 팀네이버 신입공채 Tech 최종면접 스터디원 모집 (Data 분야) <span class="float-end text-muted">81</span>
-                    </li></a>
-                    <a href="./groupdetail.html">
-                    <li class="list-group-item"><span class="badge" style="top: 30%; right: 50%;">모집중</span> 같이 성장할 백엔드 스터디원 모집!(JAVA / Spring)<span class="float-end text-muted">81</span>
-                    </li></a>
-                </ul>
-            </div>
-
-            <!-- 오른쪽 컬럼 -->
-            <div class="col-md-4">
-                <div class="user-card">
-                    <div class="info">
-                        <span class="welcome-msg"><strong>아이디</strong>님 환영합니다!</span><br>
-                        <span class="welcome-msg"><strong>OO</strong>고등학교</span>
-                    </div>
-                    <div class="user-menu">
-                        <div class="wrapper">
-                            <span class="badge">999+</span>
-                            <button class="btn btn-sm btn-outline-secondary ms-3">알림</button>
-                        </div>
-                        <button class="btn btn-sm btn-outline-secondary ms-3">마이페이지</button>
-                        <button class="btn btn-sm btn-outline-secondary ms-3">로그아웃</button>
-                    </div>
-                </div>
-                <h5 class="border-bottom pb-2 mb-3">광고자리</h5>
-                <ol class="list-group list-group-numbered mb-4">
-                    <li class="list-group-item">부산도시가스</li>
-                    <li class="list-group-item">제이시스메디칼</li>
-                    <li class="list-group-item">키다리스튜디오</li>
-                    <li class="list-group-item">스크레인스파이코리아</li>
-                    <li class="list-group-item">가축위생방역지원본부</li>
-                </ol>
-
-                <!-- <h5 class="border-bottom pb-2 mb-3">법률·노무 상담</h5>
-        <ul class="list-group">
-          <li class="list-group-item">💬 당근마켓 거래 신고 가능할까?ㅠㅠ <span class="float-end text-muted">307</span></li>
-          <li class="list-group-item">📩 법률상담 부탁드립니다 <span class="float-end text-muted">35</span></li>
-        </ul> -->
-            </div>
-
+  
+  <!-- 메인 컨텐츠 -->
+  <div class="container mt-4">
+    <div class="row">
+      <!-- 왼쪽 컬럼 -->
+      <div class="col-md-8">
+        <!-- 베스트 게시판 -->
+        <div class="card">
+          <div class="card-header">
+            <h5 class="section-title">
+              <span class="section-title-icon">🏆</span>베스트
+            </h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="post-title">
+                <span class="post-emoji">🏢</span>
+                <span>요즘 핫한 개발 언어</span>
+              </div>
+              <div class="post-info">
+                <span class="post-likes">
+                  <span class="post-likes-icon">👍</span>60
+                </span>
+                <span class="post-comments">
+                  <span class="post-comments-icon">💬</span>526
+                </span>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="post-title">
+                <span class="post-emoji">😕</span>
+                <span>여드름 도대체 몇살까지 나나요?</span>
+              </div>
+              <div class="post-info">
+                <span class="post-likes">
+                  <span class="post-likes-icon">👍</span>0
+                </span>
+                <span class="post-comments">
+                  <span class="post-comments-icon">💬</span>17
+                </span>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="post-title">
+                <span class="post-emoji">📍</span>
+                <span>명수님이 좋아하는 맛집 추천</span>
+              </div>
+              <div class="post-info">
+                <span class="post-likes">
+                  <span class="post-likes-icon">👍</span>0
+                </span>
+                <span class="post-comments">
+                  <span class="post-comments-icon">💬</span>8
+                </span>
+              </div>
+            </li>
+          </ul>
         </div>
+
+        <!-- 뻘뻘팀 게시판 -->
+        <div class="card">
+          <div class="card-header">
+            <h5 class="section-title">
+              <span class="section-title-icon">💫</span>뻘뻘팀
+            </h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <div class="post-title">
+                <span class="post-emoji">⭐</span>
+                <span>스타우브 베이비웍</span>
+              </div>
+              <div class="post-info">
+                <span class="post-comments">
+                  <span class="post-comments-icon">💬</span>77
+                </span>
+              </div>
+            </li>
+            <li class="list-group-item">
+              <div class="post-title">
+                <span class="post-emoji">🎄</span>
+                <span>조금 많이 이르지만 이거 사놓을까? 미니트리</span>
+              </div>
+              <div class="post-info">
+                <span class="post-comments">
+                  <span class="post-comments-icon">💬</span>81
+                </span>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- 스터디 게시판 -->
+        <div class="card">
+          <div class="card-header">
+            <h5 class="section-title">
+              <span class="section-title-icon">📚</span>
+              <a href="./study.html">스터디 게시판</a>
+            </h5>
+          </div>
+          <ul class="list-group list-group-flush">
+            <a href="./groupdetail.html">
+              <li class="list-group-item">
+                <div class="post-title">
+                  <span class="badge-recruiting">모집중</span>
+                  <span>[Kotlin + Spring] 코프링 스터디원 모집</span>
+                </div>
+                <div class="post-info">
+                  <span class="post-comments">
+                    <span class="post-comments-icon">💬</span>77
+                  </span>
+                </div>
+              </li>
+            </a>
+            <a href="./groupdetail.html">
+              <li class="list-group-item">
+                <div class="post-title">
+                  <span class="badge-recruiting">모집중</span>
+                  <span>팀네이버 신입공채 Tech 최종면접 스터디원 모집 (Data 분야)</span>
+                </div>
+                <div class="post-info">
+                  <span class="post-comments">
+                    <span class="post-comments-icon">💬</span>81
+                  </span>
+                </div>
+              </li>
+            </a>
+            <a href="./groupdetail.html">
+              <li class="list-group-item">
+                <div class="post-title">
+                  <span class="badge-recruiting">모집중</span>
+                  <span>같이 성장할 백엔드 스터디원 모집!(JAVA / Spring)</span>
+                </div>
+                <div class="post-info">
+                  <span class="post-comments">
+                    <span class="post-comments-icon">💬</span>81
+                  </span>
+                </div>
+              </li>
+            </a>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 오른쪽 컬럼 -->
+      <div class="col-md-4">
+        <!-- 사용자 프로필 카드 -->
+        <div class="user-profile-card">
+          <div class="user-info">
+            <div class="welcome-message">
+              <strong>아이디</strong>님 환영합니다!
+            </div>
+            <div class="user-school">
+              <strong>OO</strong>고등학교
+            </div>
+          </div>
+          <div class="user-actions">
+            <button class="btn-custom notification-btn">
+              알림
+              <span class="notification-badge">999+</span>
+            </button>
+            <button class="btn-custom">마이페이지</button>
+            <button class="btn-custom">로그아웃</button>
+          </div>
+        </div>
+
+        <!-- 광고 카드 -->
+        <div class="card">
+          <div class="card-header">
+            <h5 class="section-title">
+              <span class="section-title-icon">📢</span>광고자리
+            </h5>
+          </div>
+          <ol class="ad-list list-group list-group-flush">
+            <li class="list-group-item ad-item">부산도시가스</li>
+            <li class="list-group-item ad-item">제이시스메디칼</li>
+            <li class="list-group-item ad-item">키다리스튜디오</li>
+            <li class="list-group-item ad-item">스크레인스파이코리아</li>
+            <li class="list-group-item ad-item">가축위생방역지원본부</li>
+          </ol>
+        </div>
+      </div>
     </div>
-</section>
+  </div>
 <%@ include file="/WEB-INF/views/common/footer.jsp"%>
 

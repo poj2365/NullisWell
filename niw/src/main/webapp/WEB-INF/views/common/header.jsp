@@ -59,7 +59,7 @@ User loginUser= (User)session.getAttribute("loginUser");
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-3 col-md-4 col-6 mb-3 mb-md-0">
-          <a href="#" class="blind-brand">
+          <a href="<%=request.getContextPath() %>" class="blind-brand">
             <div class="logo-container me-3">
               <i class="bi bi-book fs-4"></i>
             </div>
@@ -122,11 +122,9 @@ User loginUser= (User)session.getAttribute("loginUser");
           </a>
           <div class="custom-dropdown-menu">
             <a class="custom-dropdown-item" href="#">스터디 모집</a>
-            <a class="custom-dropdown-item" href="#">스터디 현황</a>
-            <a class="custom-dropdown-item" href="#">스터디 후기</a>
+            <a class="custom-dropdown-item" href="#">스터디 그룹</a>
             <div class="custom-dropdown-divider"></div>
-            <a class="custom-dropdown-item" href="#">질문 & 답변</a>
-            <a class="custom-dropdown-item" href="#">스터디 자료실</a>
+            <a class="custom-dropdown-item" href="#">타이머</a>
           </div>
         </li>
       </ul>
