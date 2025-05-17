@@ -4,7 +4,7 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
 	http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
-
+<display-name>basicweb</display-name>
 <!-- 프로젝트에 대한 설정을 하는 파일 배포 서술자 -->
 <!-- 서블릿 등록하기 
 	<servlet> 태그를 이용
@@ -45,38 +45,12 @@
 		<param-value>/config/test.properties</param-value>
 	</context-param>
 	
-	<servlet>
-		<servlet-name>initservlet</servlet-name>
-		<servlet-class>com.web.controller.InitDataServlet</servlet-class>
-		<init-param>
-			<param-name>uploadPath</param-name>
-			<param-value>/upload/test</param-value>
-		</init-param>
-	</servlet>
-	<servlet-mapping>
-		<servlet-name>initservlet</servlet-name>
-		<url-pattern>/initdata.do</url-pattern>
-	</servlet-mapping>
+
 	
 	<!-- 필터 등록하기 -->
-	<filter>
-		<filter-name>basicfilter</filter-name>
-		<filter-class>com.web.common.filter.BasicFilter</filter-class>
-		<init-param>
-			<param-name>encoding</param-name>
-			<param-value>UTF-8</param-value>
-		</init-param>
-	</filter>
-	<filter-mapping>
-		<filter-name>basicfilter</filter-name>
-		<url-pattern>/*</url-pattern>
-		<servlet-name>initservlet</servlet-name>
-		<servlet-name>basic</servlet-name>
-	</filter-mapping>
+
 
 	<!-- 리스너 등록하기 -->
-	<listener>
-		<listener-class>com.web.common.listener.ServletContextTestListener</listener-class>
-	</listener>
+
 
 </web-app>
