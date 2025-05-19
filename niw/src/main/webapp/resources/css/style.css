@@ -432,6 +432,25 @@ body {
   margin-right: 0.75rem;
 }
 
+.badge {
+  background-color: #00c471;
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin-right: 0.75rem;
+}
+
+.badge2 {
+  background-color: var(--bs-accent);
+  color: white;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  margin-right: 0.75rem;
+}
+
+
 .user-profile-card {
   background-color: white;
   border-radius: 10px;

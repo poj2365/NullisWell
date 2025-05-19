@@ -27,6 +27,7 @@ User loginUser= (User)session.getAttribute("loginUser");
   <!-- 부트스트랩 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
   <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/style.css">
 </head>
 <body>
@@ -121,10 +122,11 @@ User loginUser= (User)session.getAttribute("loginUser");
             <i class="bi bi-chevron-down dropdown-toggle-icon"></i>
           </a>
           <div class="custom-dropdown-menu">
-            <a class="custom-dropdown-item" href="#">스터디 모집</a>
-            <a class="custom-dropdown-item" href="#">스터디 그룹</a>
+            <a class="custom-dropdown-item" href="<%=request.getContextPath()%>/study/studymain.do">스터디 모집</a>
+            <a class="custom-dropdown-item" href="<%=request.getContextPath()%>/study/mystudygroup.do">스터디 그룹</a>
             <div class="custom-dropdown-divider"></div>
-            <a class="custom-dropdown-item" href="#">타이머</a>
+            <a class="custom-dropdown-item" href="<%=request.getContextPath()%>/study/timerecord.do">타이머</a>
+            <a class="custom-dropdown-item" href="<%=request.getContextPath()%>/study/calender.do">내 공부 시간</a>
           </div>
         </li>
       </ul>

@@ -99,7 +99,7 @@
           <div class="card-header">
             <h5 class="section-title">
               <span class="section-title-icon">📚</span>
-              <a href="./study.html">스터디 게시판</a>
+              <a href="<%=request.getContextPath()%>/study/studyMain.do">스터디 게시판</a>
             </h5>
           </div>
           <ul class="list-group list-group-flush">
