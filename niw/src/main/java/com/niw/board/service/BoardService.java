@@ -1,10 +1,15 @@
 package com.niw.board.service;
 
-import static com.niw.common.JDBCTemplate.*;
+import static com.niw.common.JDBCTemplate.close;
+import static com.niw.common.JDBCTemplate.commit;
+import static com.niw.common.JDBCTemplate.getConnection;
+import static com.niw.common.JDBCTemplate.rollback;
 
 import java.sql.Connection;
+import java.util.List;
 
 import com.niw.board.model.dao.BoardDao;
+import com.niw.board.model.dto.Article;
 
 public enum BoardService {
 	SERVICE;
@@ -16,5 +21,12 @@ public enum BoardService {
 		else rollback(conn);
 		close(conn);
 		return result;
+	}
+	
+	public List<Article> searchArticle(int category, String searchData, int likes, String order, int cPage, int numPerPage, int totalData){
+		Connection conn = getConnection();
+		List<Article> articles = BoardDao.DAO.searchArticle(conn, category, searchData, likes, order, cPage, numPerPage, totalData);
+		close(conn);
+		return articles;
 	}
 }
