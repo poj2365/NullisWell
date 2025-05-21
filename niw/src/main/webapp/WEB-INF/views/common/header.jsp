@@ -116,7 +116,7 @@ User loginUser= (User)session.getAttribute("loginUser");
             <a class="custom-dropdown-item" href="#">고민 상담</a>
             <div class="custom-dropdown-divider"></div>
             <a class="custom-dropdown-item" href="#">정보 공유</a>
-            <a class="custom-dropdown-item" href="#">유머</a>
+            <a class="custom-dropdown-item" href="<%=request.getContextPath()%>/point/addpoint.do">유머</a>
           </div>
         </li>
         <li class="nav-item">
