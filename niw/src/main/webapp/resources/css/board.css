@@ -1,0 +1,75 @@
+@charset "UTF-8";
+.board-wrapper {
+	width: 100%;
+	display: flex;
+	gap: 30px;
+	padding: 20px;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+@media (min-width: 600px) {
+ 	article>* {
+	    flex-direction: column;
+  }
+}
+
+/* 커뮤니티 보드 카드 스타일 */
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s, box-shadow 0.2s;
+  overflow: hidden;
+  border: none;
+  margin-bottom: 1.5rem;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: white;
+  border-bottom: 1px solid #e9ecef;
+  padding: 1rem 1.5rem;
+}
+
+.section-title {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: var(--bs-blind-gray);
+  margin-bottom: 0;
+  display: flex;
+  align-items: center;
+}
+
+.section-title a {
+  color: var(--bs-blind-gray);
+  text-decoration: none;
+}
+
+.section-title a:hover {
+  color: var(--bs-primary);
+}
+
+.list-group-item {
+  padding: 1rem 1.5rem;
+  border: none;
+  border-bottom: 1px solid #e9ecef;
+  transition: background-color 0.2s;
+}
+
+.list-group-item:last-child {
+  border-bottom: none;
+}
+
+.list-group-item:hover {
+  background-color: var(--bs-primary-light);
+}
+
+.list-group-item a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
