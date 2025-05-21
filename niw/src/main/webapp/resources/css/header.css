@@ -1,0 +1,261 @@
+/* header.css - Header and navigation styles */
+
+/* Blind-style top-nav */
+.top-nav {
+  font-size: 0.9rem;
+  background-color: var(--bs-blind-dark);
+  padding: 8px 0;
+  overflow: visible !important;
+}
+
+.top-nav a {
+  color: var(--bs-blind-text);
+  text-decoration: none;
+  transition: color 0.2s;
+  font-weight: 500;
+}
+
+.top-nav a:hover {
+  color: white;
+}
+
+.top-nav a.active {
+  color: white;
+}
+
+/* Blind-style header */
+.blind-header {
+  background-color: var(--bs-blind-gray);
+  padding: 8px 0; /* 크기 조정 */
+  color: var(--bs-blind-text);
+  overflow: visible !important;
+}
+
+.logo-container {
+  background-color: var(--bs-accent);
+  border-radius: 6px;
+  width: 30px; /* 크기 조정 */
+  height: 30px; /* 크기 조정 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blind-brand {
+  color: white;
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  font-size: 0.95rem;
+}
+
+.blind-search {
+  position: relative;
+}
+
+.blind-search input {
+  background-color: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 24px;
+  color: white;
+  padding-left: 40px;
+  height: 40px; /* 크기 조정 */
+  font-size: 0.95rem; /* 크기 조정 */
+}
+
+.blind-search input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.blind-search input:focus {
+  background-color: var(--bs-blind-light-gray);
+  box-shadow: 0 0 0 2px #ff7d4d;
+  color: white;
+  border: none;
+}
+
+.blind-search-icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: rgba(255, 255, 255, 0.7);
+  z-index: 10;
+}
+
+.blind-btn {
+  background-color: var(--bs-blind-light-gray);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 40px; /* 크기 조정 */
+  height: 40px; /* 크기 조정 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.blind-btn:hover {
+  background-color: #ff7d4d;
+  color: white;
+}
+
+/* Blind-style nav */
+.blind-nav {
+  background-color: var(--bs-blind-gray);
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 5px 0; /* 크기 조정 */
+  position: relative;
+  z-index: 100;
+  overflow: visible !important;
+}
+
+.blind-nav .nav {
+  overflow-x: auto;
+  overflow-y: visible !important;
+  position: relative;
+  z-index: 101;
+}
+
+.blind-nav .nav-item {
+  position: relative;
+  z-index: 102;
+  overflow: visible !important;
+}
+
+.blind-nav .nav-link {
+  color: var(--bs-blind-text);
+  font-weight: 500;
+  padding: 4px 12px; /* 크기 조정 */
+  border-radius: 20px;
+  transition: all 0.2s;
+  font-size: 0.95rem; /* 크기 조정 */
+  position: relative;
+  cursor: pointer;
+}
+
+.blind-nav .nav-link:hover,
+.blind-nav .nav-link.active {
+  background-color: var(--bs-blind-light-gray);
+  color: white;
+}
+
+.blind-nav .nav-link i.bi:not(.dropdown-toggle-icon) {
+  margin-right: 4px;
+  font-size: 0.9rem;
+}
+
+/* Custom Dropdown Styles */
+.blind-nav .custom-dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: var(--bs-dropdown-pastel);
+  min-width: 200px;
+  border-radius: 8px;
+  padding: 10px 0;
+  margin-top: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  z-index: 10000;
+  border: none;
+  animation: fadeIn 0.3s ease-in-out;
+  transition: all 0.3s ease;
+  visibility: visible !important;
+  overflow: visible !important;
+}
+
+/* 헤더 관련 컨테이너의 overflow 설정 수정 */
+.blind-nav,
+.nav,
+.container,
+.nav-item,
+.row,
+.col-12,
+.blind-header,
+.top-nav {
+  overflow: visible !important;
+}
+
+.blind-nav .custom-dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 8px 20px;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  white-space: nowrap;
+  background: transparent;
+  border: 0;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.blind-nav .custom-dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.blind-nav .custom-dropdown-divider {
+  height: 0;
+  margin: 5px 0;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.dropdown-toggle-icon {
+  margin-left: 5px;
+  transition: transform 0.3s ease;
+  font-size: 0.75em;
+  vertical-align: middle;
+}
+
+.nav-item:hover .dropdown-toggle-icon {
+  transform: rotate(180deg);
+}
+
+.dropdown-visible {
+  display: block !important;
+}
+
+/* 헤더의 사용자 프로필 영역 */
+.user-profile-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.welcome-message {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+.user-school {
+  color: #495057;
+  margin-bottom: 1rem;
+}
+
+.user-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.notification-btn {
+  position: relative;
+}
+
+.notification-badge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: var(--bs-accent);
+  color: white;
+  font-size: 0.7rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 10px;
+}
