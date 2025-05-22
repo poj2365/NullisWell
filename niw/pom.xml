@@ -44,6 +44,16 @@
     	<artifactId>ojdbc17</artifactId>
     	<version>23.6.0.24.10</version>
 	</dependency>
+	<dependency>
+	    <groupId>com.google.code.gson</groupId>
+	    <artifactId>gson</artifactId>
+	    <version>2.13.1</version>
+	</dependency>
+	
+	
+	
+	
+	
 </dependencies>
 
 <!-- 프로젝트 빌드 관리하기 -->
