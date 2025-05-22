@@ -8,7 +8,7 @@
 
 	<error-page>
 		<error-code>404</error-code>
-		<location>/errorPage?errorCode=500</location>
+		<location>/errorPage?errorCode=404</location>
 	</error-page>
 
 	<error-page>

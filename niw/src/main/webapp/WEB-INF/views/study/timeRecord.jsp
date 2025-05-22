@@ -199,6 +199,14 @@
                 }
             });
             
+         // 페이지 떠날 때 경고
+            window.addEventListener('beforeunload', function(e) {
+                if (isRunning) {
+                    e.preventDefault();
+                    e.returnValue = ''; // 경고창 띄움
+                }
+            });
+            
             // 일시정지 버튼 클릭 이벤트
             pauseBtn.addEventListener('click', function() {
                 if (isRunning) {
