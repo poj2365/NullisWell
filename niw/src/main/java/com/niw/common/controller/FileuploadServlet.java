@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.niw.common.CommonTemplate;
 import com.oreilly.servlet.MultipartRequest;
-import com.web.common.MyFileRenamePolicy;
+import com.niw.common.MyFileRenamePolicy;
 
 /**
  * Servlet implementation class AjaxFileuploadServlet
@@ -34,7 +34,7 @@ public class FileuploadServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String path = getServletContext().getRealPath(CommonTemplate.BASIC_UPLOAD_PATH);
 		MultipartRequest mr = new MultipartRequest(request, 
-				path,1024*1024*100,"utf-8",new FileRenamePolicy());
+				path,1024*1024*100,"utf-8",new MyFileRenamePolicy());
 		System.out.println(mr.getOriginalFileName("upfile"));
 		System.out.println(mr.getFilesystemName("upfile"));
 		
