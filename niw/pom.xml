@@ -6,64 +6,75 @@
   <packaging>war</packaging>
   <name>niw</name>
 
-<!-- pom.xml 에서 사용할 변수 등록 -->
-<properties>
-	<java-version>17</java-version>
-</properties>
-<!-- ${java-version} -->
-<!-- 의존성 등록 
-	외부 라이브러리 등록 -->
-<dependencies>
-	<!-- 등록한 jar 파일들은 네트워크 통신을 이용해서 자동으로 다운로드 후 프로젝트에 등록
-	<dependency>
--->
-	<!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
-	<dependency>
-		<groupId>javax.servlet</groupId>
-		<artifactId>javax.servlet-api</artifactId>
-		<version>4.0.1</version>
-		<scope>provided</scope>
-	</dependency>
-	<!-- https://mvnrepository.com/artifact/javax.servlet.jsp/javax.servlet.jsp-api -->
-	<dependency>
-		<groupId>javax.servlet.jsp</groupId>
-		<artifactId>javax.servlet.jsp-api</artifactId>
-		<version>2.3.3</version>
-		<scope>provided</scope>
-	</dependency>
-	<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-	<dependency>
-		<groupId>org.projectlombok</groupId>
-		<artifactId>lombok</artifactId>
-		<version>1.18.30</version>
-		<scope>provided</scope>
-	</dependency>
-	<!-- https://mvnrepository.com/artifact/com.oracle.database.jdbc/ojdbc17 -->
-	<dependency>
-    <groupId>com.oracle.database.jdbc</groupId>
-    	<artifactId>ojdbc17</artifactId>
-    	<version>23.6.0.24.10</version>
-	</dependency>
-</dependencies>
 
-<!-- 프로젝트 빌드 관리하기 -->
-	<build>
-	<!--패키징 했을때 프로젝트 이름 설정-->
-	<finalName>basicweb</finalName>
+  <properties>
+  	<java-version>17</java-version>
+  </properties>
+  
+  <dependencies>
+          <!-- WebSocket API -->
+        <dependency>
+            <groupId>javax.websocket</groupId>
+            <artifactId>javax.websocket-api</artifactId>
+            <version>1.1</version>
+            <scope>provided</scope>
+        </dependency>
+  
+	<dependency>
+	    <groupId>javax.servlet</groupId>
+	    <artifactId>javax.servlet-api</artifactId>
+	    <version>4.0.1</version>
+	    <scope>provided</scope>
+	</dependency>
+	<dependency>
+	    <groupId>javax.servlet.jsp</groupId>
+	    <artifactId>javax.servlet.jsp-api</artifactId>
+	    <version>2.3.3</version>
+	    <scope>provided</scope>
+	</dependency>
+	<dependency>
+	    <groupId>org.projectlombok</groupId>
+	    <artifactId>lombok</artifactId>
+	    <version>1.18.30</version>
+	    <scope>provided</scope>
+	</dependency>
+	<dependency>
+	    <groupId>com.oracle.database.jdbc</groupId>
+	    <artifactId>ojdbc17</artifactId>
+	    <version>23.6.0.24.10</version>
+	</dependency>
 	
-	<!-- bulid시 플러그인 설정하기 -->
-	<!-- 자바 버전 설정 -->
-	<plugins>
-		<plugin>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-compiler-plugin</artifactId>
-			<version>3.13.0</version>
-			<configuration>
-				<source>${java-version}</source> 
-				<target>${java-version}</target>
-			</configuration>
-		</plugin>
-	</plugins>
-	</build>
+	<!-- 업로드처리 라이브러리 등록 -->
+	<!-- https://mvnrepository.com/artifact/com.servlets/cos -->
+<dependency>
+    <groupId>com.servlets</groupId>
+    <artifactId>cos</artifactId>
+    <version>05Nov2002</version>
+</dependency>
 
+<!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
+<dependency>
+    <groupId>com.google.code.gson</groupId>
+    <artifactId>gson</artifactId>
+    <version>2.13.1</version>
+</dependency>
+	
+  </dependencies>
+  
+  <build>
+  	<finalName>niw</finalName>
+  	
+  	<plugins>
+  		<plugin>
+  			<groupId>org.apache.maven.plugins</groupId>
+  			<artifactId>maven-compiler-plugin</artifactId>
+  			<version>3.13.0</version>
+  			<configuration>
+  				<source>${java-version}</source>
+  				<target>${java-version}</target>
+  			</configuration>
+  		</plugin>
+  	</plugins>
+  	
+  </build>
 </project>

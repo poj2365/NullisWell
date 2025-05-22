@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" errorPage = "/WEB-INF/views/common/error.jsp" %>
 <%@ page import="com.niw.user.model.dto.User" %><!--회원 dto 만들어서 넣기 -->
 <%
 User loginUser= (User)session.getAttribute("loginUser");
