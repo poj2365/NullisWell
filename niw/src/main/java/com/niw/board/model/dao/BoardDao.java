@@ -8,6 +8,8 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Properties;
 
 import com.niw.board.model.dto.Article;
@@ -45,7 +47,7 @@ public enum BoardDao {
 		}
 		return result;
 	}
-<<<<<<< HEAD
+
 	
 	public int countArticle(Connection conn, int category, String searchData, int likes) {
 		int result = 0;
@@ -104,6 +106,5 @@ public enum BoardDao {
 		}
 		return articles;
 	}
-=======
->>>>>>> branch 'master' of https://github.com/poj2365/NullisWell.git
+
 }
