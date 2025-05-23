@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8" errorPage = "/WEB-INF/views/common/error.jsp" %>
 <%@ page import="com.niw.user.model.dto.User" %><!--회원 dto 만들어서 넣기 -->
 <%
 User loginUser= (User)session.getAttribute("loginUser");
@@ -116,7 +116,7 @@ User loginUser= (User)session.getAttribute("loginUser");
             <a class="custom-dropdown-item" href="#">고민 상담</a>
             <div class="custom-dropdown-divider"></div>
             <a class="custom-dropdown-item" href="#">정보 공유</a>
-            <a class="custom-dropdown-item" href="<%=request.getContextPath()%>/point/addpoint.do">유머</a>
+            <a class="custom-dropdown-item" href="#">유머</a>
           </div>
         </li>
         <li class="nav-item">

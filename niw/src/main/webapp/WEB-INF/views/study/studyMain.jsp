@@ -39,7 +39,15 @@
                 </ul>
             </div>
             <p style="text-align: center; margin: 10px; font-size: 18px;">1 2 3 4 5 6 7 8 9</p>
+            <button class="btn btn-secondary" onclick="createGroup();">그룹 생성</button>
+            <!-- 로그인 체크 해야되고 회원 id 값 가져가야함 -->
         </div>
     </div>
 </section>
+<script>
+	const createGroup = ()=>{
+		const userId = "test";
+		location.assign("<%=request.getContextPath()%>/study/groupcreate.do?userId="+userId);
+	}
+</script>
 <%@include file="/WEB-INF/views/common/footer.jsp" %>

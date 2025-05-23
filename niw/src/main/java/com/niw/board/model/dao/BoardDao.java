@@ -8,8 +8,6 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Properties;
 
 import com.niw.board.model.dto.Article;
@@ -30,20 +28,8 @@ public enum BoardDao {
 		}
 	}
 	
-	private Article getArticle(ResultSet rs) throws SQLException{
-		return Article.builder()
-					  .articleId(rs.getInt("article_id"))
-					  .userId(rs.getInt("user_id"))
-					  .articleTitle(rs.getString("article_title"))
-					  .articleFilePath(rs.getString("article_filepath"))
-					  .articleDateTime(rs.getDate("article_datetime"))
-					  .articleModifiedTime(rs.getDate("article_modified_time"))
-					  .articleViews(rs.getInt(rs.getInt("article_views")))
-					  .articleLikes(rs.getInt(rs.getInt("article_likes")))
-					  .articleDislikes(rs.getInt("article_dislikes"))
-					  .articleCategory(rs.getInt("article_category"))
-					  .articleDelete(rs.getInt("article_delete"))
-					  .build();
+	private Article getArticle(ResultSet rs) {
+		return Article.builder().build();
 	}
 	
 	public int insertArticle(Connection conn) {
@@ -59,6 +45,7 @@ public enum BoardDao {
 		}
 		return result;
 	}
+<<<<<<< HEAD
 	
 	public int countArticle(Connection conn, int category, String searchData, int likes) {
 		int result = 0;
@@ -117,4 +104,6 @@ public enum BoardDao {
 		}
 		return articles;
 	}
+=======
+>>>>>>> branch 'master' of https://github.com/poj2365/NullisWell.git
 }

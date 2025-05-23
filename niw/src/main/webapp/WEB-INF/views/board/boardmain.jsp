@@ -83,26 +83,4 @@
 			page-bar
 		</div>
 	</article>
-
-	<!-- 오른쪽 추천게시판 -->
-	<aside class="card col-lg-2">
-		<div class="card-header">
-			<h5 class="section-title">
-				<a href="">추천</a>
-			</h5>
-			<ul class="list-group list-group-flush">
-				<li class="list-group-item">
-					<a href="">전체글</a>
-				</li>
-				<li class="list-group-item">
-					<a href="">일반글</a>
-				</li>
-				<li class="list-group-item">
-					<a href="">질문글</a>
-				</li>
-			</ul>
-		</div>
-	</aside>
-	
-</section>
 <%@include file="/WEB-INF/views/common/footer.jsp" %>

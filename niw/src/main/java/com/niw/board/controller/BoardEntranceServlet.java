@@ -76,6 +76,7 @@ public class BoardEntranceServlet extends HttpServlet {
 		List<Article> articles = BoardService.SERVICE.searchArticle(category, "", 0, null, cPage, numPerPage, totalData);
 		request.setAttribute("articles", articles);
 		request.getRequestDispatcher("/WEB-INF/views/board/boardmain.jsp").forward(request, response);
+
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
