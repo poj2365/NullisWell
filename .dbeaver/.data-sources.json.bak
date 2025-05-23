@@ -1,39 +1,18 @@
 {
 	"folders": {},
 	"connections": {
-		"oracle_thin-196f6f42bad-3361dba7618bfae7": {
+		"oracle_thin-196f6e5ec5b-6fddfb95d909159b": {
 			"provider": "oracle",
 			"driver": "oracle_thin",
 			"name": "XE",
 			"save-password": true,
 			"configuration": {
-				"host": "13.124.190.205",
-				"port": "6379",
+				"host": "localhost",
+				"port": "1521",
 				"database": "XE",
-				"url": "jdbc:oracle:thin:@//13.124.190.205:6379/XE",
+				"url": "jdbc:oracle:thin:@//localhost:1521/XE",
 				"configurationType": "MANUAL",
-				"home": "C:\\app\\chunjae\\product\\18.0.0\\dbhomeXE",
-				"type": "dev",
-				"closeIdleConnection": true,
-				"provider-properties": {
-					"@dbeaver-connection-type@": "BASIC",
-					"@dbeaver-sid-service@": "SERVICE"
-				},
-				"auth-model": "oracle_native"
-			}
-		},
-		"oracle_thin-196f6f67a53-7a75579b181a6be2": {
-			"provider": "oracle",
-			"driver": "oracle_thin",
-			"name": "XE 2",
-			"save-password": true,
-			"configuration": {
-				"host": "13.124.190.205",
-				"port": "6379",
-				"database": "XE",
-				"url": "jdbc:oracle:thin:@//13.124.190.205:6379/XE",
-				"configurationType": "MANUAL",
-				"home": "C:\\app\\chunjae\\product\\18.0.0\\dbhomeXE",
+				"home": "C:\\app\\Administrator\\product\\18.0.0\\dbhomeXE",
 				"type": "dev",
 				"closeIdleConnection": true,
 				"provider-properties": {

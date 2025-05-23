@@ -21,12 +21,20 @@ public enum BoardService {
 		else rollback(conn);
 		close(conn);
 		return result;
-	}
-	
+	}	
 	public List<Article> searchArticle(int category, String searchData, int likes, String order, int cPage, int numPerPage, int totalData){
 		Connection conn = getConnection();
 		List<Article> articles = BoardDao.DAO.searchArticle(conn, category, searchData, likes, order, cPage, numPerPage, totalData);
 		close(conn);
 		return articles;
+	}
+	
+	public int countArticle(int category, String searchData, int likes) {
+		Connection conn = getConnection();
+		int result = BoardDao.DAO.countArticle(conn, category, searchData, likes);
+		if(result > 0) commit(conn);
+		else rollback(conn);
+		close(conn);
+		return result;
 	}
 }

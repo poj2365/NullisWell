@@ -4,53 +4,30 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee
 	http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
-<display-name>basicweb</display-name>
-<!-- 프로젝트에 대한 설정을 하는 파일 배포 서술자 -->
-<!-- 서블릿 등록하기 
-	<servlet> 태그를 이용
-		자식태그
-			<servlet-name> : web.xml에서 사용할 서블릿 이름(변수명)
-			<servlet-class> : 등록할 자바클래스(패키지명.클래스명)
-			[<init-param>] : 자바클래스의 전달할 초기값을 설정(고정값)
--->
-	<servlet>
-	<servlet-name>basic</servlet-name>
-	<servlet-class>com.web.controller.BasicServlet</servlet-class>
-	</servlet>
-	
-	<!-- 등록한 서블릿 URL 주소 연결하기 
-		<servlet-mapping> 태그를 이용
-			자식 태그
-				<servlet-name> : 연결할 서블릿 이름을 설정
-				<url-pattern> : 연결할 URL주소를 설정
-	-->
-	<servlet-mapping>
-		<servlet-name>basic</servlet-name>
-		<url-pattern>/first.do</url-pattern>
-	</servlet-mapping>
-	
-	<servlet>
-	<servlet-name>test</servlet-name>
-	<servlet-class>com.web.controller.Test</servlet-class>
-	</servlet>
+	<display-name>niw</display-name>
 
-	<servlet-mapping>
-		<servlet-name>test</servlet-name>
-		<url-pattern>/myservlet.do</url-pattern>
-	</servlet-mapping>
-	
-	<!-- 전역에서 사용할 수 있는 초기값 설정 -->
-	<context-param>
-		<param-name>initdata</param-name>
-		<param-value>/config/test.properties</param-value>
-	</context-param>
-	
+	<error-page>
+		<error-code>404</error-code>
+		<location>/errorPage?errorCode=404</location>
+	</error-page>
 
-	
-	<!-- 필터 등록하기 -->
+	<error-page>
+		<error-code>500</error-code>
+		<location>/errorPage?errorCode=500</location>
+	</error-page>
 
+	<error-page>
+		<error-code>400</error-code>
+		<location>/errorPage?errorCode=400</location>
+	</error-page>
 
-	<!-- 리스너 등록하기 -->
+	<error-page>
+		<error-code>401</error-code>
+		<location>/errorPage?errorCode=401</location>
+	</error-page>
 
-
+	<error-page>
+		<error-code>403</error-code>
+		<location>/errorPage?errorCode=403</location>
+	</error-page>
 </web-app>
