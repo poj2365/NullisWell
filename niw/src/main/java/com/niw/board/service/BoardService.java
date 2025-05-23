@@ -29,4 +29,13 @@ public enum BoardService {
 		close(conn);
 		return articles;
 	}
+	
+	public int countArticle(int category, String searchData, int likes) {
+		Connection conn = getConnection();
+		int result = BoardDao.DAO.countArticle(conn, category, searchData, likes);
+		if(result > 0) commit(conn);
+		else rollback(conn);
+		close(conn);
+		return result;
+	}
 }

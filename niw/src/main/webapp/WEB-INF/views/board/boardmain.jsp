@@ -1,21 +1,28 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ page import="java.util.List, com.niw.board.model.dto.Article" %>
 <%@include file="/WEB-INF/views/common/header.jsp" %>
+<% 
+	List<Article> articles = (List<Article>) request.getAttribute("articles");
+%>
 <link rel="stylesheet" href="<%=request.getContextPath()%>/resources/css/board.css">
 <script src="<%=request.getContextPath()%>/resources/js/board.js"></script>
 <section class="row justify-content-between mt-4">
 	<!-- 사이드 네비게이터 -->
 	<aside class="card col-lg-2">
 		<div class="card-header">
+			<h5 class="section-title">
+				카테고리
+			</h5>
 			<ul class="list-group list-group-flush">
 				<li class="list-group-item">
-					<a href="">전체글</a>
+					<a href="<%= request.getContextPath()%>//board/boardentrance.do?category=0">전체글</a>
 				</li>
 				<li class="list-group-item">
-					<a href="">일반글</a>
+					<a href="<%= request.getContextPath()%>//board/boardentrance.do?category=1">일반글</a>
 				</li>
 				<li class="list-group-item">
-					<a href="">질문글</a>
+					<a href="<%= request.getContextPath()%>//board/boardentrance.do?category=2">질문글</a>
 				</li>
 			</ul>
 		</div>
@@ -59,8 +66,8 @@
 		<!-- 게시글 하단 선택요소 -->
 		<div class="row flex-row justify-content-between mt-4">
 			<div class="col-8 ml-4">
-				<input type="text" placeholder="게시글 검색">
-				<button type="button" class="btn btn-primary" onclick="searchArticle()" value="검색">
+				<input type="text" placeholder="게시글 검색" id="search">
+				<button type="button" class="btn btn-primary" onclick="searchArticle()">검색</button>
 			</div>
 			<div class="col-2">
 				<select id="likes" name="likes" class="form-select form-select-sm w-auto mr-4">
