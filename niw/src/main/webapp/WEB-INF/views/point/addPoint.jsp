@@ -262,7 +262,7 @@
     IMP.request_pay(
       {
         channelKey: "channel-key-0444714e-72d4-48cc-a56d-8cf57cdd64db", // 내가 발급한 채널키
-        merchant_uid: "order_id_1667341316092",
+        merchant_uid: Math.ceil(Math.random()*1000000000000),
         name: "포인트 : " + amount + "P" , // 출력할 상품정보 이름
         pay_method: "card", 
         escrow: false,
